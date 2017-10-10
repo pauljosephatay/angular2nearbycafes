@@ -1,0 +1,34 @@
+  <agm-map 
+  [latitude]="baseLoc.lat"
+  [longitude]="baseLoc.lng"
+  [zoom]="zoom"
+  [streetViewControl]="false"
+  [clickableIcons] = "false"
+  [styles] = "customStyles"
+  (mapDblClick)="updatePinLoc($event)">
+
+  
+
+  <agm-marker 
+  [latitude]="pinLoc.lat" 
+  [longitude]="pinLoc.lng"
+  [zIndex]="2"
+  [iconUrl]="pinMarker" 
+  [markerDraggable]="true"
+  (dragEnd)="updatePinLoc($event)"></agm-marker>
+
+  <agm-marker-cluster 
+  imagePath="assets/cluster"
+  imageExtension="svg">
+
+  <app-map-content 
+    [centerLoc]="pinLoc"
+    (onSearching)="onSearching($event)"></app-map-content>
+
+
+</agm-marker-cluster>
+
+</agm-map>
+<div class="footer">
+  Nearby Cafes <span *ngIf="isSearching">: Searching cafes...</span>
+</div>
