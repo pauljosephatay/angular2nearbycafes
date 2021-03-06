@@ -10,4 +10,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Published at https://pauljosephatay.github.io/angular2nearbycafes/
 
+![alt text](https://github.com/pauljosephatay/angular2nearbycafes/blob/master/near-by-cafes-preview.png?raw=true)
+
 
